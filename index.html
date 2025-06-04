@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionare Facturi Furnizori</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Facturi Furnizori</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Număr Factură</th>
+        <th>Furnizor</th>
+        <th>Suma</th>
+        <th>Data Scadenței</th>
+        <th>Status</th>
+        <th>Acțiuni</th>
+      </tr>
+    </thead>
+    <tbody id="facturiTable"></tbody>
+  </table>
+  <button id="adaugaFacturaBtn">Adaugă Factură</button>
+  <div id="formularDiv" style="display: none;">
+    <h2>Adăugare Factură</h2>
+    <form id="formularFactura">
+      <label for="numarFactura">Număr Factură:</label>
+      <input type="text" id="numarFactura" required><br>
+      <label for="furnizor">Furnizor:</label>
+      <input type="text" id="furnizor" required><br>
+      <label for="suma">Suma:</label>
+      <input type="number" id="suma" required><br>
+      <label for="dataScadenta">Data Scadenței:</label>
+      <input type="date" id="dataScadenta" required><br>
+      <label for="status">Status:</label>
+      <select id="status">
+        <option value="neplătită">Neplătită</option>
+        <option value="plătită">Plătită</option>
+      </select><br>
+      <button type="submit">Adaugă Factură</button>
+    </form>
+    <button id="anuleazaBtn">Anulează</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
